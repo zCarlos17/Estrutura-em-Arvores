@@ -16,6 +16,7 @@ class Trie {
 		NoTrie* raiz ;
 		void liberar(NoTrie* no);
 		bool removerAux(NoTrie* no, const std::string& palavra, int indice);
+		void exportarDotAux(NoTrie* no, std::ofstream& arquivo);
 	public: 
 		Trie();
 		~Trie(); // Destrutor  para liberar a memoria recursivamente

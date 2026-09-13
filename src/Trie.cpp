@@ -1,4 +1,4 @@
-#include "include/Trie.hpp"
+#include "Trie.hpp"
 #include <fstream>
 using namespace std;
 NoTrie::NoTrie(){
@@ -94,4 +94,31 @@ bool Trie::removerAux(NoTrie* no, const string& palavra, int indice){
 
 void Trie::remover(const string& palavra){
 	removerAux(raiz, palavra, 0);
+}
+
+void Trie::exportarDotAux(NoTrie* no, ofstream& arquivo){
+	if (no == nullptr) return;
+
+	// usa o proprio endereco do ponteiro como identificador unico do no
+	arquivo << "    node" << no
+	        << " [label=\"" << (no->fimDePalavra ? "*" : "") << "\"];\n";
+
+	for (int i = 0; i < 26; i++){
+		if (no->filhos[i] != nullptr){
+			char letra = 'a' + i;
+
+			arquivo << "    node" << no << " -> node" << no->filhos[i]
+			        << " [label=\"" << letra << "\"];\n";
+
+			exportarDotAux(no->filhos[i], arquivo);
+		}
+	}
+}
+
+void Trie::exportarDot(const string& caminhoArquivo){
+	ofstream arquivo(caminhoArquivo);
+	arquivo <<"digraph Trie{\n";
+	exportarDotAux(raiz, arquivo);
+	arquivo << "}\n";
+
 }
