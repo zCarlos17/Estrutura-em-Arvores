@@ -20,7 +20,7 @@ int main(){
 	cout<< "buscar(\"casaco\") = " <<trie.buscar("casaco")<< "\n";
 	cout<< "possuiPrefixo(\"cas\") = " <<trie.possuiPrefixo("cas")<< "\n";
 	
-	trie.exportarDot("trie.dot");
+	trie.exportarDot("visualizacoes/trie/trie.dot");
 
 	return 0;
 }

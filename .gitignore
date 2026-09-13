@@ -1,0 +1,9 @@
+bin/
+*.exe
+*.out
+programa
+programa_*
+*.o
+*.obj
+.vscode/
+*.swp

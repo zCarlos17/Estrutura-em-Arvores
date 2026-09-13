@@ -28,7 +28,7 @@ int main(){
         cout << "buscar(\"" << palavras[i] << "\") = " << p1.buscar(palavras[i]) << "\n";
     }
 
-    p1.exportarDot("patricia_bloco1.dot");
+    p1.exportarDot("visualizacoes/patricia/patricia_bloco1.dot");
 
 
     // ---------- BLOCO 2: Busca negativa (prefixos que nao sao palavras) ----------
@@ -58,7 +58,7 @@ int main(){
     cout << "buscar(\"casal\") = "    << p1.buscar("casal")    << "\n";
     cout << "buscar(\"casamento\") = " << p1.buscar("casamento") << "\n";
 
-    p1.exportarDot("patricia_bloco4_pos_remocao.dot");
+    p1.exportarDot("visualizacoes/patricia_bloco4_pos_remocao.dot");
 
 
     // ---------- BLOCO 5: Remocao de palavra que e prefixo de outra ----------
@@ -68,7 +68,7 @@ int main(){
     cout << "buscar(\"casamento\") = "     << p1.buscar("casamento")     << "\n";
     cout << "buscar(\"casamenteiro\") = "  << p1.buscar("casamenteiro")  << "\n";
 
-    p1.exportarDot("patricia_bloco5_pos_remocao.dot");
+    p1.exportarDot("visualizacoes/patricia/patricia_bloco5_pos_remocao.dot");
 
 
     // ---------- BLOCO EXTRA: remover tudo e conferir arvore vazia ----------
@@ -83,7 +83,7 @@ int main(){
              << p1.buscar(restantes[i]) << "\n";
     }
 
-    p1.exportarDot("patricia_bloco_final_vazia.dot");
+    p1.exportarDot("visualizacoes/patricia/patricia_bloco_final_vazia.dot");
 
     return 0;
 }
