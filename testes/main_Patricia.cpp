@@ -58,7 +58,7 @@ int main(){
     cout << "buscar(\"casal\") = "    << p1.buscar("casal")    << "\n";
     cout << "buscar(\"casamento\") = " << p1.buscar("casamento") << "\n";
 
-    p1.exportarDot("visualizacoes/patricia_bloco4_pos_remocao.dot");
+    p1.exportarDot("visualizacoes/patricia/patricia_bloco4_pos_remocao.dot");
 
 
     // ---------- BLOCO 5: Remocao de palavra que e prefixo de outra ----------

@@ -1,0 +1,7 @@
+digraph Splay {
+    node0x55bd8d746310 [label="2"];
+    node0x55bd8d746310 -> node0x55bd8d7462e0 [label="D"];
+    node0x55bd8d7462e0 [label="5"];
+    node0x55bd8d7462e0 -> node0x55bd8d7462b0 [label="D"];
+    node0x55bd8d7462b0 [label="10"];
+}
