@@ -1,0 +1,9 @@
+digraph Patricia{
+    node0x558231f89060 [label=""];
+    node0x558231f89060 -> node0x558231f886c0;
+    node0x558231f886c0 [label="casa*"];
+    node0x558231f886c0 -> node0x558231f888c0;
+    node0x558231f888c0 [label="menteiro*"];
+    node0x558231f886c0 -> node0x558231f89670;
+    node0x558231f89670 [label="ria*"];
+}

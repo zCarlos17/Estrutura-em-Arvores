@@ -1,28 +1,54 @@
 ===== Trie =====
-Trie | curto | n=10 -> insercao=0.008900ms, busca=0.000700ms
-Trie | curto | n=1000 -> insercao=0.359500ms, busca=0.065400ms
-Trie | curto | n=10000 -> insercao=2.131100ms, busca=0.776500ms
-Trie | curto | n=100000 -> insercao=8.981300ms, busca=6.634200ms
-Trie | medio | n=10 -> insercao=0.010200ms, busca=0.001000ms
-Trie | medio | n=1000 -> insercao=0.751800ms, busca=0.205000ms
-Trie | medio | n=10000 -> insercao=10.249700ms, busca=2.354000ms
-Trie | medio | n=100000 -> insercao=161.649300ms, busca=50.046200ms
-Trie | longo | n=10 -> insercao=0.018300ms, busca=0.001700ms
-Trie | longo | n=1000 -> insercao=1.402300ms, busca=0.361900ms
-Trie | longo | n=10000 -> insercao=56.407800ms, busca=14.927900ms
-Trie | longo | n=100000 -> insercao=450.863900ms, busca=135.617900ms
+Trie | curto | n=10 -> insercao=0.006500ms, busca=0.000300ms
+Trie | curto | n=1000 -> insercao=0.250600ms, busca=0.013200ms
+Trie | curto | n=10000 -> insercao=2.740800ms, busca=0.138000ms
+Trie | curto | n=100000 -> insercao=4.908900ms, busca=1.505800ms
+Trie | medio | n=10 -> insercao=0.005700ms, busca=0.000200ms
+Trie | medio | n=1000 -> insercao=0.332000ms, busca=0.070200ms
+Trie | medio | n=10000 -> insercao=9.677900ms, busca=0.967400ms
+Trie | medio | n=100000 -> insercao=96.613400ms, busca=15.922000ms
+Trie | longo | n=10 -> insercao=0.011400ms, busca=0.000500ms
+Trie | longo | n=1000 -> insercao=0.816100ms, busca=0.167900ms
+Trie | longo | n=10000 -> insercao=18.462200ms, busca=5.271100ms
+Trie | longo | n=100000 -> insercao=360.377800ms, busca=72.719700ms
 
 ===== Patricia =====
-Patricia | curto | n=10 -> insercao=0.006200ms, busca=0.006500ms
-Patricia | curto | n=1000 -> insercao=0.273400ms, busca=0.258100ms
-Patricia | curto | n=10000 -> insercao=2.555300ms, busca=3.453100ms
-Patricia | curto | n=100000 -> insercao=26.899100ms, busca=30.573300ms
-Patricia | medio | n=10 -> insercao=0.009400ms, busca=0.004800ms
-Patricia | medio | n=1000 -> insercao=0.657800ms, busca=0.562100ms
-Patricia | medio | n=10000 -> insercao=6.523000ms, busca=3.439000ms
-Patricia | medio | n=100000 -> insercao=44.721400ms, busca=49.454000ms
-Patricia | longo | n=10 -> insercao=0.004200ms, busca=0.002900ms
-Patricia | longo | n=1000 -> insercao=0.359400ms, busca=0.354800ms
-Patricia | longo | n=10000 -> insercao=4.315100ms, busca=4.266400ms
-Patricia | longo | n=100000 -> insercao=60.270600ms, busca=59.290100ms
+Patricia | curto | n=10 -> insercao=0.004100ms, busca=0.005300ms
+Patricia | curto | n=1000 -> insercao=0.242800ms, busca=0.166200ms
+Patricia | curto | n=10000 -> insercao=1.334200ms, busca=1.182300ms
+Patricia | curto | n=100000 -> insercao=9.372400ms, busca=9.668400ms
+Patricia | medio | n=10 -> insercao=0.002100ms, busca=0.000900ms
+Patricia | medio | n=1000 -> insercao=0.104200ms, busca=0.073300ms
+Patricia | medio | n=10000 -> insercao=2.844200ms, busca=2.396500ms
+Patricia | medio | n=100000 -> insercao=29.682000ms, busca=25.846600ms
+Patricia | longo | n=10 -> insercao=0.005900ms, busca=0.002300ms
+Patricia | longo | n=1000 -> insercao=0.387100ms, busca=0.340300ms
+Patricia | longo | n=10000 -> insercao=2.096700ms, busca=1.756000ms
+Patricia | longo | n=100000 -> insercao=31.756700ms, busca=33.177700ms
+
+===== Splay (numerico) =====
+Splay | aleatorio | n=10 -> insercao=0.006200ms, busca=0.002300ms
+Splay | aleatorio | n=1000 -> insercao=0.564400ms, busca=0.422500ms
+Splay | aleatorio | n=10000 -> insercao=7.065200ms, busca=7.082500ms
+Splay | aleatorio | n=100000 -> insercao=56.449200ms, busca=55.863400ms
+Splay | ordenado | n=10 -> insercao=0.001900ms, busca=0.000800ms
+Splay | ordenado | n=1000 -> insercao=0.030400ms, busca=0.042200ms
+Splay | ordenado | n=10000 -> insercao=0.271900ms, busca=0.535500ms
+Splay | ordenado | n=100000 -> insercao=2.882500ms, busca=5.511000ms
+
+===== Treap (numerico) =====
+Treap | aleatorio | n=10 -> insercao=0.006300ms, busca=0.000400ms
+Treap | aleatorio | n=1000 -> insercao=0.174300ms, busca=0.046600ms
+Treap | aleatorio | n=10000 -> insercao=2.841100ms, busca=1.224600ms
+Treap | aleatorio | n=100000 -> insercao=49.035100ms, busca=30.622000ms
+Treap | ordenado | n=10 -> insercao=0.004300ms, busca=0.000800ms
+Treap | ordenado | n=1000 -> insercao=0.189100ms, busca=0.100500ms
+Treap | ordenado | n=10000 -> insercao=1.774300ms, busca=1.302800ms
+Treap | ordenado | n=100000 -> insercao=12.658300ms, busca=8.916700ms
+
+===== KDTree =====
+KDTree | pontos | n=10 -> insercao=0.002800ms, busca=0.000600ms
+KDTree | pontos | n=1000 -> insercao=0.122600ms, busca=0.088000ms
+KDTree | pontos | n=10000 -> insercao=2.362200ms, busca=1.626200ms
+KDTree | pontos | n=100000 -> insercao=42.345200ms, busca=32.199200ms
 

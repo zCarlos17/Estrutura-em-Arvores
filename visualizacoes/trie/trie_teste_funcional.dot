@@ -1,0 +1,29 @@
+digraph Trie{
+    node0x558231f886c0 [label=""];
+    node0x558231f886c0 -> node0x558231f887a0 [label="c"];
+    node0x558231f887a0 [label=""];
+    node0x558231f887a0 -> node0x558231f88880 [label="a"];
+    node0x558231f88880 [label=""];
+    node0x558231f88880 -> node0x558231f88960 [label="s"];
+    node0x558231f88960 [label=""];
+    node0x558231f88960 -> node0x558231f88a40 [label="a"];
+    node0x558231f88a40 [label=""];
+    node0x558231f88a40 -> node0x558231f88b20 [label="l"];
+    node0x558231f88b20 [label="*"];
+    node0x558231f88a40 -> node0x558231f88c00 [label="m"];
+    node0x558231f88c00 [label=""];
+    node0x558231f88c00 -> node0x558231f88ce0 [label="e"];
+    node0x558231f88ce0 [label=""];
+    node0x558231f88ce0 -> node0x558231f88dc0 [label="n"];
+    node0x558231f88dc0 [label=""];
+    node0x558231f88dc0 -> node0x558231f88ea0 [label="t"];
+    node0x558231f88ea0 [label=""];
+    node0x558231f88ea0 -> node0x558231f88f80 [label="o"];
+    node0x558231f88f80 [label="*"];
+    node0x558231f88a40 -> node0x558231f89060 [label="r"];
+    node0x558231f89060 [label=""];
+    node0x558231f89060 -> node0x558231f89140 [label="a"];
+    node0x558231f89140 [label=""];
+    node0x558231f89140 -> node0x558231f89220 [label="o"];
+    node0x558231f89220 [label="*"];
+}
