@@ -1,0 +1,28 @@
+===== Trie =====
+Trie | curto | n=10 -> insercao=0.008900ms, busca=0.000700ms
+Trie | curto | n=1000 -> insercao=0.359500ms, busca=0.065400ms
+Trie | curto | n=10000 -> insercao=2.131100ms, busca=0.776500ms
+Trie | curto | n=100000 -> insercao=8.981300ms, busca=6.634200ms
+Trie | medio | n=10 -> insercao=0.010200ms, busca=0.001000ms
+Trie | medio | n=1000 -> insercao=0.751800ms, busca=0.205000ms
+Trie | medio | n=10000 -> insercao=10.249700ms, busca=2.354000ms
+Trie | medio | n=100000 -> insercao=161.649300ms, busca=50.046200ms
+Trie | longo | n=10 -> insercao=0.018300ms, busca=0.001700ms
+Trie | longo | n=1000 -> insercao=1.402300ms, busca=0.361900ms
+Trie | longo | n=10000 -> insercao=56.407800ms, busca=14.927900ms
+Trie | longo | n=100000 -> insercao=450.863900ms, busca=135.617900ms
+
+===== Patricia =====
+Patricia | curto | n=10 -> insercao=0.006200ms, busca=0.006500ms
+Patricia | curto | n=1000 -> insercao=0.273400ms, busca=0.258100ms
+Patricia | curto | n=10000 -> insercao=2.555300ms, busca=3.453100ms
+Patricia | curto | n=100000 -> insercao=26.899100ms, busca=30.573300ms
+Patricia | medio | n=10 -> insercao=0.009400ms, busca=0.004800ms
+Patricia | medio | n=1000 -> insercao=0.657800ms, busca=0.562100ms
+Patricia | medio | n=10000 -> insercao=6.523000ms, busca=3.439000ms
+Patricia | medio | n=100000 -> insercao=44.721400ms, busca=49.454000ms
+Patricia | longo | n=10 -> insercao=0.004200ms, busca=0.002900ms
+Patricia | longo | n=1000 -> insercao=0.359400ms, busca=0.354800ms
+Patricia | longo | n=10000 -> insercao=4.315100ms, busca=4.266400ms
+Patricia | longo | n=100000 -> insercao=60.270600ms, busca=59.290100ms
+
