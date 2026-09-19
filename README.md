@@ -28,28 +28,20 @@ Este repositório contém a implementação em C++17, análise assintótica, val
 
 ---
 
+```markdown
 ## 📁 Estrutura de Diretórios
 
-Estrutura-em-Arvores/
-
-├── bin/              \# Executáveis compilados
-
-├── include/          \# Ficheiros de cabeçalho (.hpp)
-
-├── src/              \# Implementações das estruturas (.cpp)
-
-├── testes/           \# Bateria de testes funcionais e de visualização
-
-├── experimentos/     \# Scripts e programas de benchmark de desempenho
-
-├── visualizacoes/    \# Ficheiros de exportação em formato .dot (Graphviz)
-
-├── relatorio/        \# Código-fonte LaTeX (.tex) e PDF final do relatório
-
-├── Makefile          \# Automação de compilação, testes e geração do relatório
-
-└── README.md         \# Documentação principal do projeto
-
+```text
+.
+├── benchmarks/                      # Scripts e códigos para experimentação
+│   ├── datasets/                    # Conjuntos de dados gerados
+│   ├── executar_benchmarks.cpp      # Painel interativo de testes
+│   └── executar_experimentos_cientificos.cpp # Bateria de 10 execuções
+├── docs/                            # Interface Web Interativa (HTML/JS/CSS)
+├── graficos/                        # Diretório de saída dos gráficos exportados (SVG)
+├── include/                         # Implementações em C++ das estruturas (.hpp)
+├── tests/                           # Testes unitários (test_trees.cpp)
+└── Makefile                         # Regras de compilação
 ---
 
 ## ⚙️ Pré-requisitos
