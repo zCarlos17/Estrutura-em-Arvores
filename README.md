@@ -7,8 +7,12 @@
 
 
 # Modelagem e Implementação de Estruturas em Árvores Avançadas
+<p>
 
 Trabalho Prático desenvolvido para a disciplina de **Algoritmos e Estruturas de Dados II** do curso de Engenharia de Computação do **Centro Federal de Educação Tecnológica de Minas Gerais (CEFET-MG)**
+</p>
+
+</div>
 
 ---
 
