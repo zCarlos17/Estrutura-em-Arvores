@@ -1,6 +1,14 @@
+<div align="center">
+
+![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
+![Make](https://img.shields.io/badge/build-make-008000?style=flat-square)
+![LaTeX](https://img.shields.io/badge/docs-LaTeX-008080?style=flat-square&logo=latex&logoColor=white)
+![Status](https://img.shields.io/badge/status-concluído-brightgreen?style=flat-square)
+
+
 # Modelagem e Implementação de Estruturas em Árvores Avançadas
 
-Trabalho Prático desenvolvido para a disciplina de **Algoritmos e Estruturas de Dados II** do curso de Engenharia de Computação do **Centro Federal de Educação Tecnológica de Minas Gerais (CEFET-MG)**.
+Trabalho Prático desenvolvido para a disciplina de **Algoritmos e Estruturas de Dados II** do curso de Engenharia de Computação do **Centro Federal de Educação Tecnológica de Minas Gerais (CEFET-MG)**
 
 ---
 
@@ -101,7 +109,17 @@ O relatório analítico completo, contendo as deduções de complexidade assint�
 
 ## 👤 Autor
 
-* **Carlos Daniel Barbosa Silveira**  
-* Curso de Engenharia de Computação — CEFET-MG
-
-&nbsp;
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/zCarlos17">
+        <img src="https://github.com/zCarlos17.png" width="120px;" alt="Carlos Daniel" style="border-radius: 8px;"/><br>
+        <sub><b>Carlos Daniel</b></sub>
+      </a>
+      <br>
+      <a href="https://github.com/zCarlos17?tab=followers">
+        <img src="https://img.shields.io/github/followers/zCarlos17?label=Seguidores&style=social" alt="Seguidores GitHub"/>
+      </a>
+    </td>
+  </tr>
+</table>
