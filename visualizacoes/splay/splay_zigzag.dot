@@ -1,7 +1,7 @@
 digraph Splay {
-    node0x559e2c9a9360 [label="5", style=filled, fillcolor=lightgray];
-    node0x559e2c9a9360 -> node0x559e2c9a9330 [label="E"];
-    node0x559e2c9a9330 [label="2"];
-    node0x559e2c9a9360 -> node0x559e2c9a9300 [label="D"];
-    node0x559e2c9a9300 [label="10"];
+    node0x55aa5a347360 [label="5", style=filled, fillcolor=lightgray];
+    node0x55aa5a347360 -> node0x55aa5a347330 [label="E"];
+    node0x55aa5a347330 [label="2"];
+    node0x55aa5a347360 -> node0x55aa5a347300 [label="D"];
+    node0x55aa5a347300 [label="10"];
 }

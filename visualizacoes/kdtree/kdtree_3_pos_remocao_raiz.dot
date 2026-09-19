@@ -1,15 +1,15 @@
 digraph KDTree {
-    node0x55b7ec1c5750 [label="(7,3)\ncorte: x"];
-    node0x55b7ec1c5750 -> node0x55b7ec1c5720 [label="E (x menor)"];
-    node0x55b7ec1c5720 [label="(3,1)\ncorte: y"];
-    node0x55b7ec1c5720 -> node0x55b7ec1c6300 [label="D (y maior/igual)"];
-    node0x55b7ec1c6300 [label="(2,2)\ncorte: x"];
-    node0x55b7ec1c6300 -> node0x55b7ec1c60c0 [label="E (x menor)"];
-    node0x55b7ec1c60c0 [label="(-3.5,2.25)\ncorte: y"];
-    node0x55b7ec1c6300 -> node0x55b7ec1c56f0 [label="D (x maior/igual)"];
-    node0x55b7ec1c56f0 [label="(4,7)\ncorte: y"];
-    node0x55b7ec1c5750 -> node0x55b7ec1c61b0 [label="D (x maior/igual)"];
-    node0x55b7ec1c61b0 [label="(9,6)\ncorte: y"];
-    node0x55b7ec1c61b0 -> node0x55b7ec1c56c0 [label="D (y maior/igual)"];
-    node0x55b7ec1c56c0 [label="(8,7)\ncorte: x"];
+    node0x5648b3c48750 [label="(7,3)\ncorte: x"];
+    node0x5648b3c48750 -> node0x5648b3c48720 [label="E (x menor)"];
+    node0x5648b3c48720 [label="(3,1)\ncorte: y"];
+    node0x5648b3c48720 -> node0x5648b3c49300 [label="D (y maior/igual)"];
+    node0x5648b3c49300 [label="(2,2)\ncorte: x"];
+    node0x5648b3c49300 -> node0x5648b3c490c0 [label="E (x menor)"];
+    node0x5648b3c490c0 [label="(-3.5,2.25)\ncorte: y"];
+    node0x5648b3c49300 -> node0x5648b3c486f0 [label="D (x maior/igual)"];
+    node0x5648b3c486f0 [label="(4,7)\ncorte: y"];
+    node0x5648b3c48750 -> node0x5648b3c491b0 [label="D (x maior/igual)"];
+    node0x5648b3c491b0 [label="(9,6)\ncorte: y"];
+    node0x5648b3c491b0 -> node0x5648b3c486c0 [label="D (y maior/igual)"];
+    node0x5648b3c486c0 [label="(8,7)\ncorte: x"];
 }

@@ -1,11 +1,11 @@
 digraph Treap {
-    node0x559e2c9a9440 [label="40\n(p=1957747793)"];
-    node0x559e2c9a9440 -> node0x559e2c9a9420;
-    node0x559e2c9a9420 [label="20\n(p=1714636915)"];
-    node0x559e2c9a9420 -> node0x559e2c9a93e0;
-    node0x559e2c9a93e0 [label="30\n(p=846930886)"];
-    node0x559e2c9a9440 -> node0x559e2c9a93c0;
-    node0x559e2c9a93c0 [label="50\n(p=1804289383)"];
-    node0x559e2c9a93c0 -> node0x559e2c9a9400;
-    node0x559e2c9a9400 [label="70\n(p=1681692777)"];
+    node0x55aa5a347440 [label="40\n(p=1957747793)"];
+    node0x55aa5a347440 -> node0x55aa5a347420;
+    node0x55aa5a347420 [label="20\n(p=1714636915)"];
+    node0x55aa5a347420 -> node0x55aa5a3473e0;
+    node0x55aa5a3473e0 [label="30\n(p=846930886)"];
+    node0x55aa5a347440 -> node0x55aa5a3473c0;
+    node0x55aa5a3473c0 [label="50\n(p=1804289383)"];
+    node0x55aa5a3473c0 -> node0x55aa5a347400;
+    node0x55aa5a347400 [label="70\n(p=1681692777)"];
 }

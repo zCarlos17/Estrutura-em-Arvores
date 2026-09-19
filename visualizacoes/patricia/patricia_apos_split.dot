@@ -1,9 +1,9 @@
 digraph Patricia{
-    node0x559e2c9a8e70 [label=""];
-    node0x559e2c9a8e70 -> node0x559e2c9a9070;
-    node0x559e2c9a9070 [label="casa"];
-    node0x559e2c9a9070 -> node0x559e2c9a8f70;
-    node0x559e2c9a8f70 [label="mento*"];
-    node0x559e2c9a9070 -> node0x559e2c9a9170;
-    node0x559e2c9a9170 [label="rao*"];
+    node0x55aa5a346e70 [label=""];
+    node0x55aa5a346e70 -> node0x55aa5a347070;
+    node0x55aa5a347070 [label="casa"];
+    node0x55aa5a347070 -> node0x55aa5a346f70;
+    node0x55aa5a346f70 [label="mento*"];
+    node0x55aa5a347070 -> node0x55aa5a347170;
+    node0x55aa5a347170 [label="rao*"];
 }

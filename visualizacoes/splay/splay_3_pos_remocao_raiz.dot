@@ -1,13 +1,13 @@
 digraph Splay {
-    node0x55b7ec1c61b0 [label="30", style=filled, fillcolor=lightgray];
-    node0x55b7ec1c61b0 -> node0x55b7ec1c56c0 [label="E"];
-    node0x55b7ec1c56c0 [label="20"];
-    node0x55b7ec1c61b0 -> node0x55b7ec1c5750 [label="D"];
-    node0x55b7ec1c5750 [label="80"];
-    node0x55b7ec1c5750 -> node0x55b7ec1c5720 [label="E"];
-    node0x55b7ec1c5720 [label="60"];
-    node0x55b7ec1c5720 -> node0x55b7ec1c6300 [label="E"];
-    node0x55b7ec1c6300 [label="50"];
-    node0x55b7ec1c5720 -> node0x55b7ec1c61e0 [label="D"];
-    node0x55b7ec1c61e0 [label="70"];
+    node0x5648b3c491b0 [label="30", style=filled, fillcolor=lightgray];
+    node0x5648b3c491b0 -> node0x5648b3c486c0 [label="E"];
+    node0x5648b3c486c0 [label="20"];
+    node0x5648b3c491b0 -> node0x5648b3c48750 [label="D"];
+    node0x5648b3c48750 [label="80"];
+    node0x5648b3c48750 -> node0x5648b3c48720 [label="E"];
+    node0x5648b3c48720 [label="60"];
+    node0x5648b3c48720 -> node0x5648b3c49300 [label="E"];
+    node0x5648b3c49300 [label="50"];
+    node0x5648b3c48720 -> node0x5648b3c491e0 [label="D"];
+    node0x5648b3c491e0 [label="70"];
 }

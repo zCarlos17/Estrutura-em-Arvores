@@ -1,13 +1,13 @@
 digraph KDTree {
-    node0x559e2c9a9390 [label="(30,40)\ncorte: x"];
-    node0x559e2c9a9390 -> node0x559e2c9a94c0 [label="E (x menor)"];
-    node0x559e2c9a94c0 [label="(5,25)\ncorte: y"];
-    node0x559e2c9a94c0 -> node0x559e2c9a94f0 [label="E (y menor)"];
-    node0x559e2c9a94f0 [label="(10,12)\ncorte: x"];
-    node0x559e2c9a9390 -> node0x559e2c9a9520 [label="D (x maior/igual)"];
-    node0x559e2c9a9520 [label="(70,70)\ncorte: y"];
-    node0x559e2c9a9520 -> node0x559e2c9a9550 [label="E (y menor)"];
-    node0x559e2c9a9550 [label="(50,30)\ncorte: x"];
-    node0x559e2c9a9550 -> node0x559e2c9a9580 [label="E (x menor)"];
-    node0x559e2c9a9580 [label="(35,45)\ncorte: y"];
+    node0x55aa5a347390 [label="(30,40)\ncorte: x"];
+    node0x55aa5a347390 -> node0x55aa5a3474c0 [label="E (x menor)"];
+    node0x55aa5a3474c0 [label="(5,25)\ncorte: y"];
+    node0x55aa5a3474c0 -> node0x55aa5a3474f0 [label="E (y menor)"];
+    node0x55aa5a3474f0 [label="(10,12)\ncorte: x"];
+    node0x55aa5a347390 -> node0x55aa5a347520 [label="D (x maior/igual)"];
+    node0x55aa5a347520 [label="(70,70)\ncorte: y"];
+    node0x55aa5a347520 -> node0x55aa5a347550 [label="E (y menor)"];
+    node0x55aa5a347550 [label="(50,30)\ncorte: x"];
+    node0x55aa5a347550 -> node0x55aa5a347580 [label="E (x menor)"];
+    node0x55aa5a347580 [label="(35,45)\ncorte: y"];
 }

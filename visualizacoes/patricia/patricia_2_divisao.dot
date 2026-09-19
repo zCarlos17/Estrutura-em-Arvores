@@ -1,19 +1,19 @@
 digraph Patricia{
-    node0x55b7ec1c6060 [label=""];
-    node0x55b7ec1c6060 -> node0x55b7ec1c56c0;
-    node0x55b7ec1c56c0 [label="casa*"];
-    node0x55b7ec1c56c0 -> node0x55b7ec1c6870;
-    node0x55b7ec1c6870 [label="cos*"];
-    node0x55b7ec1c56c0 -> node0x55b7ec1c58c0;
-    node0x55b7ec1c58c0 [label="ment"];
-    node0x55b7ec1c58c0 -> node0x55b7ec1c59c0;
-    node0x55b7ec1c59c0 [label="eiro*"];
-    node0x55b7ec1c58c0 -> node0x55b7ec1c57c0;
-    node0x55b7ec1c57c0 [label="o*"];
-    node0x55b7ec1c56c0 -> node0x55b7ec1c6670;
-    node0x55b7ec1c6670 [label="r"];
-    node0x55b7ec1c6670 -> node0x55b7ec1c6570;
-    node0x55b7ec1c6570 [label="ao*"];
-    node0x55b7ec1c6670 -> node0x55b7ec1c6770;
-    node0x55b7ec1c6770 [label="ia*"];
+    node0x5648b3c49060 [label=""];
+    node0x5648b3c49060 -> node0x5648b3c486c0;
+    node0x5648b3c486c0 [label="casa*"];
+    node0x5648b3c486c0 -> node0x5648b3c49870;
+    node0x5648b3c49870 [label="cos*"];
+    node0x5648b3c486c0 -> node0x5648b3c488c0;
+    node0x5648b3c488c0 [label="ment"];
+    node0x5648b3c488c0 -> node0x5648b3c489c0;
+    node0x5648b3c489c0 [label="eiro*"];
+    node0x5648b3c488c0 -> node0x5648b3c487c0;
+    node0x5648b3c487c0 [label="o*"];
+    node0x5648b3c486c0 -> node0x5648b3c49670;
+    node0x5648b3c49670 [label="r"];
+    node0x5648b3c49670 -> node0x5648b3c49570;
+    node0x5648b3c49570 [label="ao*"];
+    node0x5648b3c49670 -> node0x5648b3c49770;
+    node0x5648b3c49770 [label="ia*"];
 }
