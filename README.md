@@ -42,6 +42,8 @@ Este repositório contém a implementação em C++17, análise assintótica, val
 ├── include/                         # Implementações em C++ das estruturas (.hpp)
 ├── tests/                           # Testes unitários (test_trees.cpp)
 └── Makefile                         # Regras de compilação
+```
+
 ---
 
 ## ⚙️ Pré-requisitos
