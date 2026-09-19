@@ -28,7 +28,7 @@ Este repositório contém a implementação em C++17, análise assintótica, val
 
 ---
 
-```markdown
+
 ## 📁 Estrutura de Diretórios
 
 ```text
@@ -63,37 +63,29 @@ sudo apt install build-essential graphviz texlive-latex-base texlive-latex-extra
 
 ---
 
-## 🚀 Como Compilar e Executar
+## 🚀 Compilação, Execução e Testes
 
-A compilação do projeto é inteiramente orquestrada via `Makefile` a partir da raiz:
+O projeto foi configurado para ser construído de forma simplificada através do `Makefile`, garantindo compatibilidade total com ambientes Linux.
 
-### 1\. Compilar os binários principais
+### Pré-requisitos
 
-make
+Certifique-se de possuir o compilador C++ e as ferramentas essenciais instaladas no seu ambiente:
 
-Gera os executáveis em `bin/testes_funcionais` e `bin/gerar_visualizacoes`.
+```bash
+sudo apt update
+sudo apt install build-essential graphviz texlive-latex-base texlive-latex-extra
+```
+### Comandos Disponíveis
 
-### 2\. Executar os testes funcionais
+A automação é garantida pelas seguintes regras no `Makefile`:
 
-Executa a validação funcional completa (67 testes de inserção, busca e remoção nas cinco estruturas):
-
-make run-testes
-
-### 3\. Gerar os diagramas estruturais (.dot e .png)
-
-Gera os estados em Graphviz e converte-os automaticamente para imagens PNG em `relatorio/figuras/`:
-
-make run-vis
-
-### 4\. Compilar o Relatório Técnico em PDF
-
-Gera o ficheiro `relatorio.pdf` com resolução de referências, tabelas e sumário:
-
-make pdf
-
-### 5\. Limpar binários e ficheiros temporários
-
-make clean
+| Comando | Função |
+| :--- | :--- |
+| `make clean` | Remove ficheiros gerados em compilações anteriores e resíduos temporários do LaTeX |
+| `make all` | Compila todos os binários utilizando o compilador `g++` com a flag `-O3` |
+| `make run-testes` | Executa a bateria de testes garantindo a corretude estrutural das árvores |
+| `make run-vis` | Gera os ficheiros estruturais Graphviz (`.dot`) e converte-os em imagens PNG |
+| `make pdf` | Compila o documento técnico em LaTeX (`relatorio.pdf`) com resolução de referências |
 
 ---
 
