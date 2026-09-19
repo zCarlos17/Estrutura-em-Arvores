@@ -1,5 +1,4 @@
 #include "Splay.hpp"
-#include <iostream>
 using namespace std;
 
 NoSplay::NoSplay(int valor ){			//Construtor do no
@@ -165,11 +164,17 @@ void Splay::remover(int chave) {
         }
     }
 }
-
 void Splay::exportarDotAux(NoSplay* no, std::ofstream& arquivo) {
     if (no == nullptr) return;
 
-    arquivo << "    node" << no << " [label=\"" << no->chave << "\"];\n";
+    // destaca a raiz, ja que na Splay o elemento mais recentemente
+    // acessado deveria estar sempre ali -- esse e o ponto central da estrutura
+    if (no == raiz) {
+        arquivo << "    node" << no << " [label=\"" << no->chave
+                << "\", style=filled, fillcolor=lightgray];\n";
+    } else {
+        arquivo << "    node" << no << " [label=\"" << no->chave << "\"];\n";
+    }
 
     if (no->esquerda != nullptr) {
         arquivo << "    node" << no << " -> node" << no->esquerda << " [label=\"E\"];\n";
@@ -183,22 +188,8 @@ void Splay::exportarDotAux(NoSplay* no, std::ofstream& arquivo) {
 
 void Splay::exportarDot(const std::string& caminhoArquivo) {
     std::ofstream arquivo(caminhoArquivo);
-    if (!arquivo.is_open()) {
-        std::cerr << "ERRO: nao foi possivel criar " << caminhoArquivo
-                  << " -- a pasta de destino existe?\n";
-        return;
-    }
     arquivo << "digraph Splay {\n";
     exportarDotAux(raiz, arquivo);
     arquivo << "}\n";
     arquivo.close();
-}
-
-int Splay::contarNosAux(NoSplay* no){
-    if (no == nullptr) return 0;
-    return 1 + contarNosAux(no->esquerda) + contarNosAux(no->direita);
-}
-
-int Splay::contarNos(){
-    return contarNosAux(raiz);
 }

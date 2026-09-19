@@ -1,5 +1,4 @@
 #include "Trie.hpp"
-#include <iostream>
 #include <fstream>
 using namespace std;
 NoTrie::NoTrie(){
@@ -100,9 +99,12 @@ void Trie::remover(const string& palavra){
 void Trie::exportarDotAux(NoTrie* no, ofstream& arquivo){
 	if (no == nullptr) return;
 
-	// usa o proprio endereco do ponteiro como identificador unico do no
-	arquivo << "    node" << no
-	        << " [label=\"" << (no->fimDePalavra ? "*" : "") << "\"];\n";
+	// no de fim de palavra fica preenchido de cinza, com "*"; os demais ficam brancos e vazios
+	if (no->fimDePalavra) {
+		arquivo << "    node" << no << " [label=\"*\", style=filled, fillcolor=lightgray];\n";
+	} else {
+		arquivo << "    node" << no << " [label=\"\"];\n";
+	}
 
 	for (int i = 0; i < 26; i++){
 		if (no->filhos[i] != nullptr){
@@ -118,26 +120,10 @@ void Trie::exportarDotAux(NoTrie* no, ofstream& arquivo){
 
 void Trie::exportarDot(const string& caminhoArquivo){
 	ofstream arquivo(caminhoArquivo);
-	if (!arquivo.is_open()) {
-	    cerr << "ERRO: nao foi possivel criar " << caminhoArquivo
-	              << " -- a pasta de destino existe?\n";
-	    return;
-	}
-	arquivo <<"digraph Trie{\n";
+	arquivo << "digraph Trie{\n";
+	arquivo << "    rankdir=LR;\n";                                  // layout horizontal, nao vertical
+	arquivo << "    node [shape=circle, fontsize=11, width=0.35, fixedsize=true];\n";
+	arquivo << "    nodesep=0.35; ranksep=0.6;\n";                    // espacamento mais compacto
 	exportarDotAux(raiz, arquivo);
 	arquivo << "}\n";
-
-}
-
-int Trie::contarNosAux(NoTrie* no){
-    if (no == nullptr) return 0;
-    int total = 1; // conta o proprio no
-    for (int i = 0; i < 26; i++){
-        total += contarNosAux(no->filhos[i]);
-    }
-    return total;
-}
-
-int Trie::contarNos(){
-    return contarNosAux(raiz);
 }

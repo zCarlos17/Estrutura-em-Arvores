@@ -1,0 +1,35 @@
+\babel@toc {brazilian}{}\relax 
+\contentsline {section}{\numberline {1}Introdução e Fundamentação Teórica}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Contextualização e Motivação}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Trie (Árvore de Prefixos)}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Árvore Patricia (Radix Tree Compacta)}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Árvore Splay}{3}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Árvore Treap}{3}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}KD-Tree}{4}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Síntese comparativa com BST e AVL}{4}{subsection.1.7}%
+\contentsline {section}{\numberline {2}Projeto e Implementação das Estruturas}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Trie}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Patricia}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Splay}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Treap}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}KD-Tree}{5}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Visualização (comum às cinco estruturas)}{5}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Demonstração e Rastreamento Visual}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Trie e Árvore Patricia: Compactação de Prefixos}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Árvore Splay: Autoajuste via Rotações}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Árvore Treap e KD-Tree}{6}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Análise de Complexidade e Comparação Teórica}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Tabela comparativa de complexidade assintótica}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Discussão analítica}{7}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Metodologia Experimental e Resultados}{8}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Metodologia}{8}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Resultados: Trie vs. Patricia}{9}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Resultados: Splay vs. Treap}{10}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Localidade de acesso: Splay vs. Treap}{10}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Resultados: KD-Tree}{11}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Convergência entre teoria e prática}{11}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Aplicações, Análise Crítica e Discussão}{11}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Aplicações}{11}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Vantagens, limitações e divergências entre teoria e prática}{11}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Melhorias e extensões possíveis}{12}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Conclusão}{12}{section.7}%

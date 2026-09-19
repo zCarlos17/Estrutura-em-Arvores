@@ -1,0 +1,5 @@
+digraph Patricia{
+    node0x559e2c9a8e70 [label=""];
+    node0x559e2c9a8e70 -> node0x559e2c9a8f70;
+    node0x559e2c9a8f70 [label="casamento*"];
+}

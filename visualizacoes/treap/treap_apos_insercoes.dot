@@ -1,0 +1,17 @@
+digraph Treap {
+    node0x559e2c9a9440 [label="40\n(p=1957747793)"];
+    node0x559e2c9a9440 -> node0x559e2c9a9420;
+    node0x559e2c9a9420 [label="20\n(p=1714636915)"];
+    node0x559e2c9a9420 -> node0x559e2c9a9460;
+    node0x559e2c9a9460 [label="10\n(p=424238335)"];
+    node0x559e2c9a9420 -> node0x559e2c9a93e0;
+    node0x559e2c9a93e0 [label="30\n(p=846930886)"];
+    node0x559e2c9a9440 -> node0x559e2c9a93c0;
+    node0x559e2c9a93c0 [label="50\n(p=1804289383)"];
+    node0x559e2c9a93c0 -> node0x559e2c9a9400;
+    node0x559e2c9a9400 [label="70\n(p=1681692777)"];
+    node0x559e2c9a9400 -> node0x559e2c9a9480;
+    node0x559e2c9a9480 [label="60\n(p=719885386)"];
+    node0x559e2c9a9400 -> node0x559e2c9a94a0;
+    node0x559e2c9a94a0 [label="80\n(p=1649760492)"];
+}
