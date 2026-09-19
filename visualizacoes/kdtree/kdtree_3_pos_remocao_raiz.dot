@@ -1,0 +1,15 @@
+digraph KDTree {
+    node0x55e19e6ff750 [label="(7,3)\ncorte: x"];
+    node0x55e19e6ff750 -> node0x55e19e6ff720 [label="E (x menor)"];
+    node0x55e19e6ff720 [label="(3,1)\ncorte: y"];
+    node0x55e19e6ff720 -> node0x55e19e700300 [label="D (y maior/igual)"];
+    node0x55e19e700300 [label="(2,2)\ncorte: x"];
+    node0x55e19e700300 -> node0x55e19e7000c0 [label="E (x menor)"];
+    node0x55e19e7000c0 [label="(-3.5,2.25)\ncorte: y"];
+    node0x55e19e700300 -> node0x55e19e6ff6f0 [label="D (x maior/igual)"];
+    node0x55e19e6ff6f0 [label="(4,7)\ncorte: y"];
+    node0x55e19e6ff750 -> node0x55e19e7001b0 [label="D (x maior/igual)"];
+    node0x55e19e7001b0 [label="(9,6)\ncorte: y"];
+    node0x55e19e7001b0 -> node0x55e19e6ff6c0 [label="D (y maior/igual)"];
+    node0x55e19e6ff6c0 [label="(8,7)\ncorte: x"];
+}

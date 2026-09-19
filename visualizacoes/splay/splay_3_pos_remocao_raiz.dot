@@ -1,0 +1,13 @@
+digraph Splay {
+    node0x55e19e7001b0 [label="30"];
+    node0x55e19e7001b0 -> node0x55e19e6ff6c0 [label="E"];
+    node0x55e19e6ff6c0 [label="20"];
+    node0x55e19e7001b0 -> node0x55e19e6ff750 [label="D"];
+    node0x55e19e6ff750 [label="80"];
+    node0x55e19e6ff750 -> node0x55e19e6ff720 [label="E"];
+    node0x55e19e6ff720 [label="60"];
+    node0x55e19e6ff720 -> node0x55e19e700300 [label="E"];
+    node0x55e19e700300 [label="50"];
+    node0x55e19e6ff720 -> node0x55e19e7001e0 [label="D"];
+    node0x55e19e7001e0 [label="70"];
+}

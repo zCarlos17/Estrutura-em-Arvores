@@ -62,45 +62,68 @@ std::vector<std::pair<double,double>> lerPontos(const std::string& caminho) {
     return pontos;
 }
 
+template <typename Estrutura>
+size_t bytesExtras(Estrutura&) { return 0; }
+
+template <>
+size_t bytesExtras<Patricia>(Patricia& p) { return p.somaBytesRotulos(); }
+
 
 // ============================================================================
 // BLOCO 1 -- Trie / Patricia (chave string)
 // ============================================================================
 template <typename Estrutura>
 void benchmarkEstrutura(const std::string& nomeEstrutura, const std::string& nomeCaso,
-                          int tamanho, const std::vector<std::string>& palavras,
+                          int tamanho, size_t tamanhoNo,
+                          const std::vector<std::string>& palavras,
                           std::ofstream& csv, std::ofstream& log) {
     Estrutura estrutura;
 
+    // ---- INSERCAO ----
     auto inicioInsercao = std::chrono::high_resolution_clock::now();
     for (const std::string& palavra : palavras) {
         estrutura.inserir(palavra);
     }
     auto fimInsercao = std::chrono::high_resolution_clock::now();
-
     double tempoInsercao = std::chrono::duration<double, std::milli>(fimInsercao - inicioInsercao).count();
 
+    // ---- MEMORIA (medida logo apos a insercao, antes de qualquer remocao) ----
+    long quantidadeNos = estrutura.contarNos();
+    size_t memoriaBytes = quantidadeNos * tamanhoNo + bytesExtras(estrutura);
+
+    // ---- BUSCA ----
     auto inicioBusca = std::chrono::high_resolution_clock::now();
     for (const std::string& palavra : palavras) {
         estrutura.buscar(palavra);
     }
     auto fimBusca = std::chrono::high_resolution_clock::now();
-
     double tempoBusca = std::chrono::duration<double, std::milli>(fimBusca - inicioBusca).count();
 
+    // ---- REMOCAO (remove tudo, um por um) ----
+    auto inicioRemocao = std::chrono::high_resolution_clock::now();
+    for (const std::string& palavra : palavras) {
+        estrutura.remover(palavra);
+    }
+    auto fimRemocao = std::chrono::high_resolution_clock::now();
+    double tempoRemocao = std::chrono::duration<double, std::milli>(fimRemocao - inicioRemocao).count();
+
     csv << nomeEstrutura << "," << nomeCaso << "," << tamanho << ","
-        << tempoInsercao << "," << tempoBusca << "\n";
+        << tempoInsercao << "," << tempoBusca << "," << tempoRemocao << ","
+        << quantidadeNos << "," << memoriaBytes << "\n";
 
     std::string mensagem = nomeEstrutura + " | " + nomeCaso + " | n=" + std::to_string(tamanho) +
                             " -> insercao=" + std::to_string(tempoInsercao) + "ms, busca=" +
-                            std::to_string(tempoBusca) + "ms";
+                            std::to_string(tempoBusca) + "ms, remocao=" + std::to_string(tempoRemocao) +
+                            "ms, nos=" + std::to_string(quantidadeNos) +
+                            ", memoria=" + std::to_string(memoriaBytes) + "bytes";
 
     std::cout << mensagem << "\n";
     log << mensagem << "\n";
 }
 
 template <typename Estrutura>
-void rodarTodosOsTestes(const std::string& nomeEstrutura, std::ofstream& csv, std::ofstream& log) {
+void rodarTodosOsTestes(const std::string& nomeEstrutura, size_t tamanhoNo,
+                          std::ofstream& csv, std::ofstream& log) {
     std::vector<std::string> casos = {"curto", "medio", "longo"};
     std::vector<int> tamanhos = {10, 1000, 10000, 100000};
 
@@ -120,7 +143,7 @@ void rodarTodosOsTestes(const std::string& nomeEstrutura, std::ofstream& csv, st
                 continue;
             }
 
-            benchmarkEstrutura<Estrutura>(nomeEstrutura, caso, n, palavras, csv, log);
+            benchmarkEstrutura<Estrutura>(nomeEstrutura, caso, n, tamanhoNo, palavras, csv, log);
         }
     }
 
@@ -134,7 +157,8 @@ void rodarTodosOsTestes(const std::string& nomeEstrutura, std::ofstream& csv, st
 // ============================================================================
 template <typename Estrutura>
 void benchmarkEstruturaNumerica(const std::string& nomeEstrutura, const std::string& nomeCaso,
-                                  int tamanho, const std::vector<int>& valores,
+                                  int tamanho, size_t tamanhoNo,
+                                  const std::vector<int>& valores,
                                   std::ofstream& csv, std::ofstream& log) {
     Estrutura estrutura;
 
@@ -143,31 +167,42 @@ void benchmarkEstruturaNumerica(const std::string& nomeEstrutura, const std::str
         estrutura.inserir(v);
     }
     auto fimInsercao = std::chrono::high_resolution_clock::now();
-
     double tempoInsercao = std::chrono::duration<double, std::milli>(fimInsercao - inicioInsercao).count();
+
+    long quantidadeNos = estrutura.contarNos();
+    size_t memoriaBytes = quantidadeNos * tamanhoNo;
 
     auto inicioBusca = std::chrono::high_resolution_clock::now();
     for (int v : valores) {
         estrutura.buscar(v);
     }
     auto fimBusca = std::chrono::high_resolution_clock::now();
-
     double tempoBusca = std::chrono::duration<double, std::milli>(fimBusca - inicioBusca).count();
 
+    auto inicioRemocao = std::chrono::high_resolution_clock::now();
+    for (int v : valores) {
+        estrutura.remover(v);
+    }
+    auto fimRemocao = std::chrono::high_resolution_clock::now();
+    double tempoRemocao = std::chrono::duration<double, std::milli>(fimRemocao - inicioRemocao).count();
+
     csv << nomeEstrutura << "," << nomeCaso << "," << tamanho << ","
-        << tempoInsercao << "," << tempoBusca << "\n";
+        << tempoInsercao << "," << tempoBusca << "," << tempoRemocao << ","
+        << quantidadeNos << "," << memoriaBytes << "\n";
 
     std::string mensagem = nomeEstrutura + " | " + nomeCaso + " | n=" + std::to_string(tamanho) +
                             " -> insercao=" + std::to_string(tempoInsercao) + "ms, busca=" +
-                            std::to_string(tempoBusca) + "ms";
+                            std::to_string(tempoBusca) + "ms, remocao=" + std::to_string(tempoRemocao) +
+                            "ms, nos=" + std::to_string(quantidadeNos) +
+                            ", memoria=" + std::to_string(memoriaBytes) + "bytes";
 
     std::cout << mensagem << "\n";
     log << mensagem << "\n";
 }
 
 template <typename Estrutura>
-void rodarTodosOsTestesNumericos(const std::string& nomeEstrutura, std::ofstream& csv, std::ofstream& log) {
-    // "aleatorio" -> caso medio;  "ordenado" -> pior caso classico de BST sem balanceamento
+void rodarTodosOsTestesNumericos(const std::string& nomeEstrutura, size_t tamanhoNo,
+                                   std::ofstream& csv, std::ofstream& log) {
     std::vector<std::string> casos = {"aleatorio", "ordenado"};
     std::vector<int> tamanhos = {10, 1000, 10000, 100000};
 
@@ -187,7 +222,7 @@ void rodarTodosOsTestesNumericos(const std::string& nomeEstrutura, std::ofstream
                 continue;
             }
 
-            benchmarkEstruturaNumerica<Estrutura>(nomeEstrutura, caso, n, valores, csv, log);
+            benchmarkEstruturaNumerica<Estrutura>(nomeEstrutura, caso, n, tamanhoNo, valores, csv, log);
         }
     }
 
@@ -197,7 +232,7 @@ void rodarTodosOsTestesNumericos(const std::string& nomeEstrutura, std::ofstream
 
 
 // ============================================================================
-// BLOCO 3  -- KD-Tree (chave par de doubles)
+// BLOCO 3 -- KD-Tree (chave par de doubles)
 // ============================================================================
 void rodarTestesKDTree(std::ofstream& csv, std::ofstream& log) {
     std::vector<int> tamanhos = {10, 1000, 10000, 100000};
@@ -226,6 +261,9 @@ void rodarTestesKDTree(std::ofstream& csv, std::ofstream& log) {
         auto fimInsercao = std::chrono::high_resolution_clock::now();
         double tempoInsercao = std::chrono::duration<double, std::milli>(fimInsercao - inicioInsercao).count();
 
+        long quantidadeNos = kd.contarNos();
+        size_t memoriaBytes = quantidadeNos * sizeof(NoKD);
+
         auto inicioBusca = std::chrono::high_resolution_clock::now();
         for (auto& p : pontos) {
             kd.buscar(p.first, p.second);
@@ -233,11 +271,21 @@ void rodarTestesKDTree(std::ofstream& csv, std::ofstream& log) {
         auto fimBusca = std::chrono::high_resolution_clock::now();
         double tempoBusca = std::chrono::duration<double, std::milli>(fimBusca - inicioBusca).count();
 
-        csv << "KDTree,pontos," << n << "," << tempoInsercao << "," << tempoBusca << "\n";
+        auto inicioRemocao = std::chrono::high_resolution_clock::now();
+        for (auto& p : pontos) {
+            kd.remover(p.first, p.second);
+        }
+        auto fimRemocao = std::chrono::high_resolution_clock::now();
+        double tempoRemocao = std::chrono::duration<double, std::milli>(fimRemocao - inicioRemocao).count();
+
+        csv << "KDTree,pontos," << n << "," << tempoInsercao << "," << tempoBusca << ","
+            << tempoRemocao << "," << quantidadeNos << "," << memoriaBytes << "\n";
 
         std::string mensagem = "KDTree | pontos | n=" + std::to_string(n) +
                                 " -> insercao=" + std::to_string(tempoInsercao) + "ms, busca=" +
-                                std::to_string(tempoBusca) + "ms";
+                                std::to_string(tempoBusca) + "ms, remocao=" + std::to_string(tempoRemocao) +
+                                "ms, nos=" + std::to_string(quantidadeNos) +
+                                ", memoria=" + std::to_string(memoriaBytes) + "bytes";
         std::cout << mensagem << "\n";
         log << mensagem << "\n";
     }
@@ -246,27 +294,6 @@ void rodarTestesKDTree(std::ofstream& csv, std::ofstream& log) {
     log << "\n";
 }
 
-
-// ============================================================================
-// BLOCO 4  -- Localidade temporal: Splay vs Treap
-//
-// Este é o experimento que prova a vantagem teorica da Splay:
-// "aproxima elementos frequentemente consultados da raiz".
-//
-// Metodologia:
-//   1. Insere a MESMA base de chaves em uma Splay e em uma Treap.
-//   2. Mede o tempo de busca sob duas sequencias de acesso diferentes,
-//      geradas pelo gerar_dados.cpp:
-//        - ENVIESADA (80/20): 20% das chaves respondem por ~84% dos acessos
-//        - UNIFORME: todas as chaves tem a mesma chance
-//   3. Compara os 4 resultados (Splay/enviesado, Splay/uniforme,
-//      Treap/enviesado, Treap/uniforme).
-//
-// Expectativa teorica: a Splay deveria ser NOTAVELMENTE mais rapida no
-// caso enviesado (porque as chaves quentes ficam perto da raiz), enquanto
-// a Treap nao deveria mudar de comportamento entre enviesado e uniforme
-// (ja que ela nao se reorganiza por acesso).
-// ============================================================================
 template <typename Estrutura>
 void benchmarkLocalidade(const std::string& nomeEstrutura, const std::string& tipoAcesso,
                            const std::vector<int>& base, const std::vector<int>& acessos,
@@ -296,8 +323,9 @@ void benchmarkLocalidade(const std::string& nomeEstrutura, const std::string& ti
     log << mensagem << "\n";
 }
 
-void rodarTestesLocalidade(std::ofstream& csv, std::ofstream& log) {
-    std::string cabecalho = "===== LOCALIDADE TEMPORAL (Splay vs Treap) =====";
+template <typename Estrutura>
+void rodarTestesLocalidade(const std::string& nomeEstrutura, std::ofstream& csv, std::ofstream& log) {
+    std::string cabecalho = "===== LOCALIDADE TEMPORAL -- " + nomeEstrutura + " =====";
     std::cout << cabecalho << "\n";
     log << cabecalho << "\n";
 
@@ -317,10 +345,8 @@ void rodarTestesLocalidade(std::ofstream& csv, std::ofstream& log) {
 
         if (acessoEnviesado.empty() || acessoUniforme.empty()) continue;
 
-        benchmarkLocalidade<Splay>("Splay", "enviesado", base, acessoEnviesado, csv, log);
-        benchmarkLocalidade<Splay>("Splay", "uniforme",  base, acessoUniforme,  csv, log);
-        benchmarkLocalidade<Treap>("Treap", "enviesado", base, acessoEnviesado, csv, log);
-        benchmarkLocalidade<Treap>("Treap", "uniforme",  base, acessoUniforme,  csv, log);
+        benchmarkLocalidade<Estrutura>(nomeEstrutura, "enviesado", base, acessoEnviesado, csv, log);
+        benchmarkLocalidade<Estrutura>(nomeEstrutura, "uniforme",  base, acessoUniforme,  csv, log);
     }
 
     std::cout << "\n";
@@ -337,19 +363,19 @@ int main() {
         std::cout << "ERRO: nao foi possivel criar os arquivos de saida em resultados/\n";
         return 1;
     }
-    csv << "estrutura,caso,tamanho,tempo_insercao_ms,tempo_busca_ms\n";
+    csv << "estrutura,caso,tamanho,tempo_insercao_ms,tempo_busca_ms,tempo_remocao_ms,quantidade_nos,memoria_bytes_estimada\n";
 
-    rodarTodosOsTestes<Trie>("Trie", csv, log);
-    rodarTodosOsTestes<Patricia>("Patricia", csv, log);
-    rodarTodosOsTestesNumericos<Splay>("Splay", csv, log);
-    rodarTodosOsTestesNumericos<Treap>("Treap", csv, log);
+    rodarTodosOsTestes<Trie>("Trie", sizeof(NoTrie), csv, log);
+    rodarTodosOsTestes<Patricia>("Patricia", sizeof(NoPatricia), csv, log);
+    rodarTodosOsTestesNumericos<Splay>("Splay", sizeof(NoSplay), csv, log);
+    rodarTodosOsTestesNumericos<Treap>("Treap", sizeof(NoTreap), csv, log);
     rodarTestesKDTree(csv, log);
 
     csv.close();
     log.close();
 
-    // arquivo SEPARADO para o experimento de localidade, ja que o formato
-    // de colunas eh diferente (tem "tipo_acesso" e "qtd_acessos" em vez de
+    // arquivo SEPARADO para o experimento de localidade -- formato de
+    // colunas diferente (tem "tipo_acesso" e "qtd_acessos" em vez de
     // "tempo_insercao"/"tempo_busca" separados)
     std::ofstream csvLocalidade("resultados/localidade_splay.csv");
     std::ofstream logLocalidade("resultados/log_localidade.txt");
@@ -360,7 +386,8 @@ int main() {
     }
     csvLocalidade << "estrutura,tipo_acesso,tamanho_base,qtd_acessos,tempo_total_ms,tempo_medio_por_acesso_ms\n";
 
-    rodarTestesLocalidade(csvLocalidade, logLocalidade);
+    rodarTestesLocalidade<Splay>("Splay", csvLocalidade, logLocalidade);
+    rodarTestesLocalidade<Treap>("Treap", csvLocalidade, logLocalidade);
 
     csvLocalidade.close();
     logLocalidade.close();

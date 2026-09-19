@@ -1,4 +1,5 @@
 #include "Patricia.hpp"
+#include <iostream>
 using namespace std;
 
 NoPatricia::NoPatricia(const string& rotuloInicial){		//Construtor
@@ -214,8 +215,38 @@ void Patricia::exportarDotAux(NoPatricia* no, ofstream& arquivo){
 }
 void Patricia::exportarDot(const string& caminhoArquivo){
 	ofstream arquivo(caminhoArquivo);
+	if (!arquivo.is_open()) {
+	    cerr << "ERRO: nao foi possivel criar " << caminhoArquivo
+	              << " -- a pasta de destino existe?\n";
+	    return;
+	}
 	arquivo << "digraph Patricia{\n";
 	exportarDotAux(raiz, arquivo);
 	arquivo << "}\n";
 	arquivo.close();
+}
+
+int Patricia::contarNosAux(NoPatricia* no){
+    if (no == nullptr) return 0;
+    int total = 1;
+    for (int i = 0; i < 26; i++){
+        total += contarNosAux(no->filhos[i]);
+    }
+    return total;
+}
+
+int Patricia::contarNos(){
+    return contarNosAux(raiz);
+}
+size_t Patricia::somaBytesRotulosAux(NoPatricia* no){
+    if (no == nullptr) return 0;
+    size_t total = no->rotulo.size(); // 1 byte por caractere (char)
+    for (int i = 0; i < 26; i++){
+        total += somaBytesRotulosAux(no->filhos[i]);
+    }
+    return total;
+}
+
+size_t Patricia::somaBytesRotulos(){
+    return somaBytesRotulosAux(raiz);
 }

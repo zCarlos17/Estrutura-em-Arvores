@@ -20,9 +20,9 @@ class Treap{
 		NoTreap* rotacionarEsq(NoTreap* y);
 		NoTreap* inserirAux(NoTreap* no, int chave);
 		NoTreap* removerAux(NoTreap* no, int chave);
-		NoTreap* rotacionarEsq(NoTreap* no, int chave);
 		bool buscarAux(NoTreap* no, int chave);
 		void exportarDotAux(NoTreap* no, std::ofstream& arquivo);
+		int contarNosAux(NoTreap* no);
 	public:
 		Treap();	
 		~Treap();	
@@ -30,5 +30,6 @@ class Treap{
 		bool buscar(int chave);
 		void remover(int chave);
 		void exportarDot(const std::string& caminhoArquivo);
+		int contarNos();
 };
 #endif

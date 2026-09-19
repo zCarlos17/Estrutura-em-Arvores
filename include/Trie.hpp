@@ -17,6 +17,7 @@ class Trie {
 		void liberar(NoTrie* no);
 		bool removerAux(NoTrie* no, const std::string& palavra, int indice);
 		void exportarDotAux(NoTrie* no, std::ofstream& arquivo);
+		int contarNosAux(NoTrie* no);
 	public: 
 		Trie();
 		~Trie(); // Destrutor  para liberar a memoria recursivamente
@@ -27,7 +28,7 @@ class Trie {
 	void remover (const std::string& palavra);		
 
 	void exportarDot(const std::string& caminhoArquivo);
+	int contarNos(); // usado para estimar consumo de memoria (Secao 5)
 };
-
 
 #endif

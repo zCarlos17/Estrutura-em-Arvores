@@ -1,54 +1,54 @@
 ===== Trie =====
-Trie | curto | n=10 -> insercao=0.006500ms, busca=0.000300ms
-Trie | curto | n=1000 -> insercao=0.250600ms, busca=0.013200ms
-Trie | curto | n=10000 -> insercao=2.740800ms, busca=0.138000ms
-Trie | curto | n=100000 -> insercao=4.908900ms, busca=1.505800ms
-Trie | medio | n=10 -> insercao=0.005700ms, busca=0.000200ms
-Trie | medio | n=1000 -> insercao=0.332000ms, busca=0.070200ms
-Trie | medio | n=10000 -> insercao=9.677900ms, busca=0.967400ms
-Trie | medio | n=100000 -> insercao=96.613400ms, busca=15.922000ms
-Trie | longo | n=10 -> insercao=0.011400ms, busca=0.000500ms
-Trie | longo | n=1000 -> insercao=0.816100ms, busca=0.167900ms
-Trie | longo | n=10000 -> insercao=18.462200ms, busca=5.271100ms
-Trie | longo | n=100000 -> insercao=360.377800ms, busca=72.719700ms
+Trie | curto | n=10 -> insercao=0.004800ms, busca=0.000200ms, remocao=0.002700ms, nos=30, memoria=6480bytes
+Trie | curto | n=1000 -> insercao=0.230800ms, busca=0.010200ms, remocao=0.139300ms, nos=1519, memoria=328104bytes
+Trie | curto | n=10000 -> insercao=1.448100ms, busca=0.131100ms, remocao=0.997200ms, nos=8412, memoria=1816992bytes
+Trie | curto | n=100000 -> insercao=5.521100ms, busca=1.509900ms, remocao=3.149500ms, nos=18202, memoria=3931632bytes
+Trie | medio | n=10 -> insercao=0.005600ms, busca=0.000300ms, remocao=0.005100ms, nos=79, memoria=17064bytes
+Trie | medio | n=1000 -> insercao=0.755400ms, busca=0.087000ms, remocao=0.852300ms, nos=6521, memoria=1408536bytes
+Trie | medio | n=10000 -> insercao=7.772000ms, busca=0.687100ms, remocao=5.082100ms, nos=58225, memoria=12576600bytes
+Trie | medio | n=100000 -> insercao=102.822200ms, busca=15.465100ms, remocao=72.848900ms, nos=507581, memoria=109637496bytes
+Trie | longo | n=10 -> insercao=0.011300ms, busca=0.000500ms, remocao=0.009500ms, nos=201, memoria=43416bytes
+Trie | longo | n=1000 -> insercao=1.950600ms, busca=0.182200ms, remocao=1.129800ms, nos=18534, memoria=4003344bytes
+Trie | longo | n=10000 -> insercao=19.490100ms, busca=5.274100ms, remocao=22.402000ms, nos=178139, memoria=38478024bytes
+Trie | longo | n=100000 -> insercao=274.307600ms, busca=73.996400ms, remocao=298.953800ms, nos=1707759, memoria=368875944bytes
 
 ===== Patricia =====
-Patricia | curto | n=10 -> insercao=0.004100ms, busca=0.005300ms
-Patricia | curto | n=1000 -> insercao=0.242800ms, busca=0.166200ms
-Patricia | curto | n=10000 -> insercao=1.334200ms, busca=1.182300ms
-Patricia | curto | n=100000 -> insercao=9.372400ms, busca=9.668400ms
-Patricia | medio | n=10 -> insercao=0.002100ms, busca=0.000900ms
-Patricia | medio | n=1000 -> insercao=0.104200ms, busca=0.073300ms
-Patricia | medio | n=10000 -> insercao=2.844200ms, busca=2.396500ms
-Patricia | medio | n=100000 -> insercao=29.682000ms, busca=25.846600ms
-Patricia | longo | n=10 -> insercao=0.005900ms, busca=0.002300ms
-Patricia | longo | n=1000 -> insercao=0.387100ms, busca=0.340300ms
-Patricia | longo | n=10000 -> insercao=2.096700ms, busca=1.756000ms
-Patricia | longo | n=100000 -> insercao=31.756700ms, busca=33.177700ms
+Patricia | curto | n=10 -> insercao=0.005900ms, busca=0.005000ms, remocao=0.006000ms, nos=12, memoria=3005bytes
+Patricia | curto | n=1000 -> insercao=0.189700ms, busca=0.091700ms, remocao=0.227700ms, nos=1286, memoria=320446bytes
+Patricia | curto | n=10000 -> insercao=1.493400ms, busca=0.964700ms, remocao=2.156400ms, nos=8412, memoria=2094587bytes
+Patricia | curto | n=100000 -> insercao=9.745300ms, busca=10.014900ms, remocao=13.119800ms, nos=18202, memoria=4532297bytes
+Patricia | medio | n=10 -> insercao=0.002100ms, busca=0.000900ms, remocao=0.001800ms, nos=12, memoria=3054bytes
+Patricia | medio | n=1000 -> insercao=0.118100ms, busca=0.081400ms, remocao=0.286800ms, nos=1341, memoria=339088bytes
+Patricia | medio | n=10000 -> insercao=2.575000ms, busca=1.276100ms, remocao=3.650400ms, nos=12722, memoria=3213280bytes
+Patricia | medio | n=100000 -> insercao=25.423900ms, busca=19.879500ms, remocao=51.479200ms, nos=127389, memoria=32100052bytes
+Patricia | longo | n=10 -> insercao=0.003800ms, busca=0.001100ms, remocao=0.001500ms, nos=11, memoria=2928bytes
+Patricia | longo | n=1000 -> insercao=0.394000ms, busca=0.337700ms, remocao=0.713100ms, nos=1323, memoria=346637bytes
+Patricia | longo | n=10000 -> insercao=2.374200ms, busca=1.864700ms, remocao=3.639800ms, nos=12759, memoria=3342370bytes
+Patricia | longo | n=100000 -> insercao=48.663100ms, busca=42.945700ms, remocao=81.837700ms, nos=127227, memoria=33260054bytes
 
 ===== Splay (numerico) =====
-Splay | aleatorio | n=10 -> insercao=0.006200ms, busca=0.002300ms
-Splay | aleatorio | n=1000 -> insercao=0.564400ms, busca=0.422500ms
-Splay | aleatorio | n=10000 -> insercao=7.065200ms, busca=7.082500ms
-Splay | aleatorio | n=100000 -> insercao=56.449200ms, busca=55.863400ms
-Splay | ordenado | n=10 -> insercao=0.001900ms, busca=0.000800ms
-Splay | ordenado | n=1000 -> insercao=0.030400ms, busca=0.042200ms
-Splay | ordenado | n=10000 -> insercao=0.271900ms, busca=0.535500ms
-Splay | ordenado | n=100000 -> insercao=2.882500ms, busca=5.511000ms
+Splay | aleatorio | n=10 -> insercao=0.004400ms, busca=0.001200ms, remocao=0.001600ms, nos=10, memoria=320bytes
+Splay | aleatorio | n=1000 -> insercao=0.262300ms, busca=0.210100ms, remocao=0.224900ms, nos=1000, memoria=32000bytes
+Splay | aleatorio | n=10000 -> insercao=3.004700ms, busca=2.978300ms, remocao=3.074800ms, nos=10000, memoria=320000bytes
+Splay | aleatorio | n=100000 -> insercao=76.100400ms, busca=54.708300ms, remocao=55.077000ms, nos=100000, memoria=3200000bytes
+Splay | ordenado | n=10 -> insercao=0.001300ms, busca=0.000600ms, remocao=0.000900ms, nos=10, memoria=320bytes
+Splay | ordenado | n=1000 -> insercao=0.024900ms, busca=0.035600ms, remocao=0.039200ms, nos=1000, memoria=32000bytes
+Splay | ordenado | n=10000 -> insercao=0.253000ms, busca=0.412400ms, remocao=0.476100ms, nos=10000, memoria=320000bytes
+Splay | ordenado | n=100000 -> insercao=2.432900ms, busca=4.751800ms, remocao=5.252600ms, nos=100000, memoria=3200000bytes
 
 ===== Treap (numerico) =====
-Treap | aleatorio | n=10 -> insercao=0.006300ms, busca=0.000400ms
-Treap | aleatorio | n=1000 -> insercao=0.174300ms, busca=0.046600ms
-Treap | aleatorio | n=10000 -> insercao=2.841100ms, busca=1.224600ms
-Treap | aleatorio | n=100000 -> insercao=49.035100ms, busca=30.622000ms
-Treap | ordenado | n=10 -> insercao=0.004300ms, busca=0.000800ms
-Treap | ordenado | n=1000 -> insercao=0.189100ms, busca=0.100500ms
-Treap | ordenado | n=10000 -> insercao=1.774300ms, busca=1.302800ms
-Treap | ordenado | n=100000 -> insercao=12.658300ms, busca=8.916700ms
+Treap | aleatorio | n=10 -> insercao=0.006100ms, busca=0.000200ms, remocao=0.000800ms, nos=10, memoria=240bytes
+Treap | aleatorio | n=1000 -> insercao=0.346300ms, busca=0.137000ms, remocao=0.272900ms, nos=1000, memoria=24000bytes
+Treap | aleatorio | n=10000 -> insercao=2.277200ms, busca=1.059200ms, remocao=1.709700ms, nos=10000, memoria=240000bytes
+Treap | aleatorio | n=100000 -> insercao=43.411600ms, busca=27.837800ms, remocao=35.038500ms, nos=100000, memoria=2400000bytes
+Treap | ordenado | n=10 -> insercao=0.002400ms, busca=0.000300ms, remocao=0.000700ms, nos=10, memoria=240bytes
+Treap | ordenado | n=1000 -> insercao=0.079400ms, busca=0.042500ms, remocao=0.038700ms, nos=1000, memoria=24000bytes
+Treap | ordenado | n=10000 -> insercao=0.724900ms, busca=0.505900ms, remocao=0.484900ms, nos=10000, memoria=240000bytes
+Treap | ordenado | n=100000 -> insercao=8.534600ms, busca=6.480600ms, remocao=5.856200ms, nos=100000, memoria=2400000bytes
 
 ===== KDTree =====
-KDTree | pontos | n=10 -> insercao=0.002800ms, busca=0.000600ms
-KDTree | pontos | n=1000 -> insercao=0.122600ms, busca=0.088000ms
-KDTree | pontos | n=10000 -> insercao=2.362200ms, busca=1.626200ms
-KDTree | pontos | n=100000 -> insercao=42.345200ms, busca=32.199200ms
+KDTree | pontos | n=10 -> insercao=0.001900ms, busca=0.000400ms, remocao=0.001800ms, nos=10, memoria=320bytes
+KDTree | pontos | n=1000 -> insercao=0.107500ms, busca=0.078100ms, remocao=0.200100ms, nos=1000, memoria=32000bytes
+KDTree | pontos | n=10000 -> insercao=2.007300ms, busca=1.311200ms, remocao=2.655700ms, nos=10000, memoria=320000bytes
+KDTree | pontos | n=100000 -> insercao=35.904000ms, busca=27.154600ms, remocao=43.157700ms, nos=100000, memoria=3200000bytes
 

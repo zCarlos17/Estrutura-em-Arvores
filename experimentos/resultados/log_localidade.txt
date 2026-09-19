@@ -1,14 +1,16 @@
-===== LOCALIDADE TEMPORAL (Splay vs Treap) =====
-Splay | enviesado | base=1000 acessos=1000 -> total=0.161700ms, media_por_acesso=0.000162ms
-Splay | uniforme | base=1000 acessos=1000 -> total=0.198300ms, media_por_acesso=0.000198ms
-Treap | enviesado | base=1000 acessos=1000 -> total=0.047500ms, media_por_acesso=0.000048ms
-Treap | uniforme | base=1000 acessos=1000 -> total=0.044800ms, media_por_acesso=0.000045ms
-Splay | enviesado | base=1000 acessos=10000 -> total=1.589600ms, media_por_acesso=0.000159ms
-Splay | uniforme | base=1000 acessos=10000 -> total=2.051200ms, media_por_acesso=0.000205ms
-Treap | enviesado | base=1000 acessos=10000 -> total=0.579200ms, media_por_acesso=0.000058ms
-Treap | uniforme | base=1000 acessos=10000 -> total=0.468000ms, media_por_acesso=0.000047ms
-Splay | enviesado | base=1000 acessos=100000 -> total=14.881400ms, media_por_acesso=0.000149ms
-Splay | uniforme | base=1000 acessos=100000 -> total=18.740200ms, media_por_acesso=0.000187ms
-Treap | enviesado | base=1000 acessos=100000 -> total=4.483500ms, media_por_acesso=0.000045ms
-Treap | uniforme | base=1000 acessos=100000 -> total=4.387200ms, media_por_acesso=0.000044ms
+===== LOCALIDADE TEMPORAL -- Splay =====
+Splay | enviesado | base=1000 acessos=1000 -> total=0.169500ms, media_por_acesso=0.000170ms
+Splay | uniforme | base=1000 acessos=1000 -> total=0.150400ms, media_por_acesso=0.000150ms
+Splay | enviesado | base=1000 acessos=10000 -> total=1.317000ms, media_por_acesso=0.000132ms
+Splay | uniforme | base=1000 acessos=10000 -> total=1.507700ms, media_por_acesso=0.000151ms
+Splay | enviesado | base=1000 acessos=100000 -> total=12.280100ms, media_por_acesso=0.000123ms
+Splay | uniforme | base=1000 acessos=100000 -> total=14.915900ms, media_por_acesso=0.000149ms
+
+===== LOCALIDADE TEMPORAL -- Treap =====
+Treap | enviesado | base=1000 acessos=1000 -> total=0.069400ms, media_por_acesso=0.000069ms
+Treap | uniforme | base=1000 acessos=1000 -> total=0.047700ms, media_por_acesso=0.000048ms
+Treap | enviesado | base=1000 acessos=10000 -> total=0.442200ms, media_por_acesso=0.000044ms
+Treap | uniforme | base=1000 acessos=10000 -> total=0.401500ms, media_por_acesso=0.000040ms
+Treap | enviesado | base=1000 acessos=100000 -> total=4.668500ms, media_por_acesso=0.000047ms
+Treap | uniforme | base=1000 acessos=100000 -> total=4.533500ms, media_por_acesso=0.000045ms
 

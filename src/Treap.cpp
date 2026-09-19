@@ -1,4 +1,5 @@
 #include "Treap.hpp"
+#include <iostream>
 #include <cstdlib>
 
 NoTreap::NoTreap(int valor) {
@@ -103,8 +104,22 @@ void Treap::exportarDotAux(NoTreap* no, std::ofstream& arquivo) {
 
 void Treap::exportarDot(const std::string& caminhoArquivo) {
     std::ofstream arquivo(caminhoArquivo);
+    if (!arquivo.is_open()) {
+        std::cerr << "ERRO: nao foi possivel criar " << caminhoArquivo
+                  << " -- a pasta de destino existe?\n";
+        return;
+    }
     arquivo << "digraph Treap {\n";
     exportarDotAux(raiz, arquivo);
     arquivo << "}\n";
     arquivo.close();
+}
+
+int Treap::contarNosAux(NoTreap* no){
+    if (no == nullptr) return 0;
+    return 1 + contarNosAux(no->esquerda) + contarNosAux(no->direita);
+}
+
+int Treap::contarNos(){
+    return contarNosAux(raiz);
 }

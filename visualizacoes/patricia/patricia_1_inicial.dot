@@ -1,0 +1,17 @@
+digraph Patricia{
+    node0x55e19e700060 [label=""];
+    node0x55e19e700060 -> node0x55e19e6ff6c0;
+    node0x55e19e6ff6c0 [label="casa*"];
+    node0x55e19e6ff6c0 -> node0x55e19e6ff8c0;
+    node0x55e19e6ff8c0 [label="ment"];
+    node0x55e19e6ff8c0 -> node0x55e19e6ff9c0;
+    node0x55e19e6ff9c0 [label="eiro*"];
+    node0x55e19e6ff8c0 -> node0x55e19e6ff7c0;
+    node0x55e19e6ff7c0 [label="o*"];
+    node0x55e19e6ff6c0 -> node0x55e19e700670;
+    node0x55e19e700670 [label="r"];
+    node0x55e19e700670 -> node0x55e19e700570;
+    node0x55e19e700570 [label="ao*"];
+    node0x55e19e700670 -> node0x55e19e700770;
+    node0x55e19e700770 [label="ia*"];
+}

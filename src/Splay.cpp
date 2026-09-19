@@ -1,4 +1,5 @@
 #include "Splay.hpp"
+#include <iostream>
 using namespace std;
 
 NoSplay::NoSplay(int valor ){			//Construtor do no
@@ -182,8 +183,22 @@ void Splay::exportarDotAux(NoSplay* no, std::ofstream& arquivo) {
 
 void Splay::exportarDot(const std::string& caminhoArquivo) {
     std::ofstream arquivo(caminhoArquivo);
+    if (!arquivo.is_open()) {
+        std::cerr << "ERRO: nao foi possivel criar " << caminhoArquivo
+                  << " -- a pasta de destino existe?\n";
+        return;
+    }
     arquivo << "digraph Splay {\n";
     exportarDotAux(raiz, arquivo);
     arquivo << "}\n";
     arquivo.close();
+}
+
+int Splay::contarNosAux(NoSplay* no){
+    if (no == nullptr) return 0;
+    return 1 + contarNosAux(no->esquerda) + contarNosAux(no->direita);
+}
+
+int Splay::contarNos(){
+    return contarNosAux(raiz);
 }

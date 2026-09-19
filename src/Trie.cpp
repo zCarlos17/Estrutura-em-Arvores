@@ -1,4 +1,5 @@
 #include "Trie.hpp"
+#include <iostream>
 #include <fstream>
 using namespace std;
 NoTrie::NoTrie(){
@@ -117,8 +118,26 @@ void Trie::exportarDotAux(NoTrie* no, ofstream& arquivo){
 
 void Trie::exportarDot(const string& caminhoArquivo){
 	ofstream arquivo(caminhoArquivo);
+	if (!arquivo.is_open()) {
+	    cerr << "ERRO: nao foi possivel criar " << caminhoArquivo
+	              << " -- a pasta de destino existe?\n";
+	    return;
+	}
 	arquivo <<"digraph Trie{\n";
 	exportarDotAux(raiz, arquivo);
 	arquivo << "}\n";
 
+}
+
+int Trie::contarNosAux(NoTrie* no){
+    if (no == nullptr) return 0;
+    int total = 1; // conta o proprio no
+    for (int i = 0; i < 26; i++){
+        total += contarNosAux(no->filhos[i]);
+    }
+    return total;
+}
+
+int Trie::contarNos(){
+    return contarNosAux(raiz);
 }

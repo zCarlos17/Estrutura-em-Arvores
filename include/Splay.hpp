@@ -19,6 +19,7 @@ class Splay{
 		void rotacionarDir(NoSplay* no);
 		void splay(NoSplay* no);
 		void exportarDotAux(NoSplay* no, std::ofstream& arquivo);
+		int contarNosAux(NoSplay* no);
 	public:
 		Splay();
 		~Splay();
@@ -27,5 +28,6 @@ class Splay{
 		bool buscar(int chave);
 		void remover(int chave);
 		void exportarDot(const std::string& caminhoArquivo);
+		int contarNos();
 };
 #endif
