@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.9.19)  19 SEP 2026 20:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.9.19)  19 SEP 2026 20:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -619,13 +619,17 @@ t line 486.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `relatorio.out' has not changed.
 (rerunfilecheck)             Checksum: BDE02DBE2B42F8414120B1F77E05C8FB;6729.
  ) 
 Here is how much of TeX's memory you used:
  13716 strings out of 475158
  219434 string characters out of 5765758
- 630023 words of memory out of 5000000
+ 630022 words of memory out of 5000000
  36476 multiletter control sequences out of 15000+600000
  596987 words of font info for 85 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
@@ -641,7 +645,7 @@ st/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvet
 ic/uhvro8a.pfb>
-Output written on relatorio.pdf (13 pages, 1307231 bytes).
+Output written on relatorio.pdf (13 pages, 1307065 bytes).
 PDF statistics:
  416 PDF objects out of 1000 (max. 8388607)
  295 compressed objects within 3 object streams

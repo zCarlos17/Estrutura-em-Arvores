@@ -15,7 +15,7 @@ class Trie {
 	private: 
 		NoTrie* raiz ;
 		void liberar(NoTrie* no);
-		bool removerAux(NoTrie* no, const std::string& palavra, int indice);
+		bool removerAux(NoTrie* no, const std::string& palavra, size_t indice);
 		void exportarDotAux(NoTrie* no, std::ofstream& arquivo);
 		int contarNosAux(NoTrie* no);
 	public: 

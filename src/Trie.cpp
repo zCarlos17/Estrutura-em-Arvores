@@ -23,7 +23,7 @@ void Trie::liberar(NoTrie* no){
 }
 void Trie::inserir(const string& palavra){
 	NoTrie* atual = raiz;			//String vazia
-	for (int i=0; i<palavra.length(); i++){
+	for (size_t i=0; i<palavra.length(); i++){
 		int indice = palavra[i] - 'a';			// Converte letra para numero de 0 a 25( posicao no vetor filhos[26])
 		if( atual -> filhos[indice] == nullptr){
 			atual->filhos[indice] = new NoTrie();
@@ -35,7 +35,7 @@ void Trie::inserir(const string& palavra){
 
 bool Trie::buscar(const string& palavra){
 	NoTrie* atual = raiz;
-	for(int i=0; i<palavra.length();i++){
+	for(size_t i=0; i<palavra.length();i++){
 		int indice = palavra[i] - 'a';
 		if(atual -> filhos[indice] == nullptr){
 			return false;
@@ -48,7 +48,7 @@ bool Trie::buscar(const string& palavra){
 }
 bool Trie::possuiPrefixo(const string& prefixo){
 	NoTrie* atual = raiz;
-	for(int i=0; i<prefixo.length();i++){
+	for(size_t i=0; i<prefixo.length();i++){
 		int indice = prefixo[i] - 'a';
 		if(atual -> filhos[indice] == nullptr){
 			return false;
@@ -58,9 +58,9 @@ bool Trie::possuiPrefixo(const string& prefixo){
 	return true;
 }
 
-bool Trie::removerAux(NoTrie* no, const string& palavra, int indice){
+bool Trie::removerAux(NoTrie* no, const string& palavra, size_t indice){
 	//retorna true somente quando o no ficou vazio suficiente para o nivel acima poder apagar
-	if(indice== palavra.length()){
+	if(indice == palavra.length()){
 		no->fimDePalavra = false; //desmarca como fim de palavra
 
 		//verificação se esse no ainda possui algum filho 
